@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Especies Desplazadas de Lerma</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>ESPECIES DESPLAZADAS DE LERMA</h1>
+    <p>Archivo visual de fauna amenazada, vulnerable o desplazada del territorio.</p>
+</header>
+
+<div class="contenedor">
+
+    <section class="panel-intro">
+        <div>
+            <strong>12 especies identificadas</strong>
+            <span>4 aves · 2 anfibios · 3 peces · 2 mamiferos · 1 reptil</span>
+        </div>
+    </section>
+
+    <nav class="filtros" aria-label="Filtrar especies por grupo">
+        <button class="filtro activo" data-filtro="todas">Todas</button>
+        <button class="filtro" data-filtro="ave">Aves</button>
+        <button class="filtro" data-filtro="anfibio">Anfibios</button>
+        <button class="filtro" data-filtro="pez">Peces</button>
+        <button class="filtro" data-filtro="mamifero">Mamiferos</button>
+        <button class="filtro" data-filtro="reptil">Reptiles</button>
+    </nav>
+
+    <div class="grid">
+
+        <div class="especie"
+        data-nombre="Pato Mexicano (Anas diazi)"
+        data-grupo="ave"
+        data-estado="Amenazada"
+        data-habitat="Humedales, lagunas, canales y zonas de agua dulce con vegetacion."
+        data-amenaza="Perdida de humedales, contaminacion del agua y reduccion de sitios de refugio."
+        data-importancia="Su presencia ayuda a reconocer humedales con alimento, agua y vegetacion suficiente para aves acuaticas."
+        data-imagen="assets/patomexicano.jpg"
+        data-texto="Ave acuatica nativa de Mexico asociada a cuerpos de agua dulce. En Lerma puede funcionar como una senal visible de la salud del humedal.">
+            <span class="etiqueta">Ave</span>
+            PATO MEXICANO
+        </div>
+
+        <div class="especie"
+        data-nombre="Garza Morena (Ardea herodias)"
+        data-grupo="ave"
+        data-estado="Vulnerable local"
+        data-habitat="Orillas de rios, lagunas, canales, tulares y humedales abiertos."
+        data-amenaza="Alteracion de riberas, basura, ruido y disminucion de peces y anfibios."
+        data-importancia="Es una depredadora que conecta la salud del agua con la disponibilidad de alimento."
+        data-imagen="assets/garza-morena.jpg"
+        data-texto="Ave grande de zonas humedas que se alimenta principalmente en las orillas. Su desplazamiento suele relacionarse con la perdida de zonas tranquilas para alimentarse.">
+            <span class="etiqueta">Ave</span>
+            GARZA MORENA
+        </div>
+
+        <div class="especie"
+        data-nombre="Mascarita Transvolcanica (Geothlypis speciosa)"
+        data-grupo="ave"
+        data-estado="En riesgo"
+        data-habitat="Tulares, carrizales y vegetacion densa dentro de humedales."
+        data-amenaza="Desecacion de humedales, fragmentacion de carrizales y cambio de uso de suelo."
+        data-importancia="Es una especie muy ligada a los humedales del centro de Mexico; protegerla tambien protege su vegetacion."
+        data-imagen="assets/mascarita-transvolcanica.jpg"
+        data-texto="Ave pequena asociada a vegetacion palustre. Depende de zonas densas de tule y carrizo, por eso es sensible a la transformacion del humedal.">
+            <span class="etiqueta">Ave</span>
+            MASCARITA TRANSVOLCANICA
+        </div>
+
+        <div class="especie"
+        data-nombre="Pato Tepalcate (Oxyura jamaicensis)"
+        data-grupo="ave"
+        data-estado="Vulnerable local"
+        data-habitat="Lagunas y cuerpos de agua con vegetacion emergente."
+        data-amenaza="Contaminacion, perdida de zonas de descanso y perturbacion humana."
+        data-importancia="Forma parte de la diversidad de aves acuaticas que usan el humedal como refugio y zona de alimentacion."
+        data-imagen="assets/pato-tepalcate.jpg"
+        data-texto="Pato buceador que utiliza cuerpos de agua tranquilos. La calidad del agua y la vegetacion son clave para su permanencia.">
+            <span class="etiqueta">Ave</span>
+            PATO TEPALCATE
+        </div>
+
+        <div class="especie"
+        data-nombre="Axolote de Lerma (Ambystoma lermaense)"
+        data-grupo="anfibio"
+        data-estado="Amenazada"
+        data-habitat="Canales, manantiales, lagunas someras y cuerpos de agua fria o templada."
+        data-amenaza="Contaminacion, reduccion del agua, especies introducidas y perdida de vegetacion acuatica."
+        data-importancia="Es una especie emblematica de los ecosistemas acuaticos de Lerma y un indicador de agua con mejores condiciones."
+        data-imagen="assets/ajolote.jpg"
+        data-texto="Anfibio acuatico ligado al sistema lacustre de Lerma. Su conservacion depende de agua limpia, refugios y conectividad entre cuerpos de agua.">
+            <span class="etiqueta">Anfibio</span>
+            AXOLOTE DE LERMA
+        </div>
+
+        <div class="especie"
+        data-nombre="Rana de Moctezuma (Lithobates montezumae)"
+        data-grupo="anfibio"
+        data-estado="Vulnerable"
+        data-habitat="Orillas de lagunas, arroyos, canales y zonas humedas con vegetacion."
+        data-amenaza="Contaminacion del agua, perdida de humedales y alteracion de orillas."
+        data-importancia="Los anfibios responden rapido a cambios en el ambiente, por eso ayudan a leer la salud del agua y del suelo."
+        data-imagen="assets/rana-de-moctezuma.jpg"
+        data-texto="Rana asociada a ambientes humedos. Necesita agua y vegetacion cercana para reproducirse, alimentarse y refugiarse.">
+            <span class="etiqueta">Anfibio</span>
+            RANA DE MOCTEZUMA
+        </div>
+
+        <div class="especie"
+        data-nombre="Mexcalpique (Girardinichthys multiradiatus)"
+        data-grupo="pez"
+        data-estado="Vulnerable"
+        data-habitat="Cuerpos de agua dulce, canales y zonas con vegetacion acuatica."
+        data-amenaza="Contaminacion, reduccion de caudales y competencia con peces introducidos."
+        data-importancia="Los peces pequenos sostienen redes alimentarias y reflejan cambios en la calidad del agua."
+        data-imagen="assets/mexcalpique.jpg"
+        data-texto="Pez pequeno de agua dulce relacionado con sistemas lacustres del centro de Mexico. Su presencia depende de agua limpia y refugios vegetales.">
+            <span class="etiqueta">Pez</span>
+            MEXCALPIQUE
+        </div>
+
+        <div class="especie"
+        data-nombre="Charla de Santiago (Chirostoma riojai)"
+        data-grupo="pez"
+        data-estado="En riesgo"
+        data-habitat="Lagunas, canales y aguas dulces del sistema Lerma."
+        data-amenaza="Perdida de habitat, deterioro del agua y especies invasoras."
+        data-importancia="Representa la fragilidad de los peces nativos frente a cambios rapidos en los cuerpos de agua."
+        data-imagen="assets/charla-de-santiago.jpg"
+        data-texto="Pez nativo asociado al sistema lacustre. Su conservacion requiere proteger la calidad y continuidad del agua.">
+            <span class="etiqueta">Pez</span>
+            CHARLA DE SANTIAGO
+        </div>
+
+        <div class="especie"
+        data-nombre="Tiro de Lerma (Goodea atripinnis)"
+        data-grupo="pez"
+        data-estado="Vulnerable"
+        data-habitat="Rios lentos, lagunas, canales y cuerpos de agua con vegetacion."
+        data-amenaza="Contaminacion, fragmentacion del habitat y disminucion de cuerpos de agua."
+        data-importancia="Es parte de la diversidad de peces nativos del altiplano y ayuda a mantener el equilibrio del ecosistema acuatico."
+        data-imagen="assets/tiro-de-lerma.jpg"
+        data-texto="Pez dulceacuicola que puede habitar aguas tranquilas con vegetacion. Es sensible a cambios fuertes en la calidad del agua.">
+            <span class="etiqueta">Pez</span>
+            TIRO DE LERMA
+        </div>
+
+        <div class="especie"
+        data-nombre="Cacomixtle (Bassariscus astutus)"
+        data-grupo="mamifero"
+        data-estado="Desplazada local"
+        data-habitat="Zonas arboladas, barrancas, matorrales, cultivos y areas periurbanas con refugios."
+        data-amenaza="Urbanizacion, perdida de corredores biologicos, atropellamientos y conflicto con personas."
+        data-importancia="Ayuda a dispersar semillas y controlar pequenas poblaciones de animales, conectando zonas naturales y urbanas."
+        data-imagen="assets/cacomixtle.jpg"
+        data-texto="Mamifero nocturno adaptable, pero vulnerable cuando se rompen los corredores naturales que usa para moverse y alimentarse.">
+            <span class="etiqueta">Mamifero</span>
+            CACOMIXTLE
+        </div>
+
+        <div class="especie"
+        data-nombre="Tlacuache (Didelphis virginiana)"
+        data-grupo="mamifero"
+        data-estado="Desplazada local"
+        data-habitat="Matorrales, zonas agricolas, bordes urbanos, riberas y jardines con refugio."
+        data-amenaza="Atropellamientos, persecucion, basura, perros y perdida de refugios."
+        data-importancia="Consume frutos, insectos y pequenos animales; tambien ayuda a limpiar materia organica del entorno."
+        data-imagen="assets/tlacuache.jpg"
+        data-texto="Marsupial nocturno que suele acercarse a zonas urbanas cuando su habitat se fragmenta. Es importante no capturarlo ni lastimarlo.">
+            <span class="etiqueta">Mamifero</span>
+            TLACUACHE
+        </div>
+
+        <div class="especie"
+        data-nombre="Serpiente de cascabel Transvolcanica (Crotalus triseriatus)"
+        data-grupo="reptil"
+        data-estado="Vulnerable local"
+        data-habitat="Pastizales, laderas, matorrales y zonas rocosas del Eje Neovolcanico."
+        data-amenaza="Persecucion por miedo, perdida de habitat, incendios y expansion urbana."
+        data-importancia="Controla poblaciones de roedores y forma parte del equilibrio de pastizales y zonas abiertas."
+        data-imagen="assets/serpiente-de-cascabel-transvolcanica.jpg"
+        data-texto="Reptil de zonas abiertas y templadas. Aunque puede ser peligrosa, cumple una funcion ecologica importante y debe observarse a distancia.">
+            <span class="etiqueta">Reptil</span>
+            SERPIENTE DE CASCABEL TRANSVOLCANICA
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    Fauna en desplazamiento • Taller de Dibujo Bordado • UAM Lerma
+</footer>
+
+<div id="popup">
+
+    <div class="contenido-popup">
+
+        <span id="cerrar">✕</span>
+
+        <h2 id="titulo"></h2>
+
+        <img id="imagen">
+
+        <p id="descripcion"></p>
+
+        <div class="ficha">
+            <p><strong>Grupo:</strong> <span id="grupo"></span></p>
+            <p><strong>Estado:</strong> <span id="estado"></span></p>
+            <p><strong>Habitat:</strong> <span id="habitat"></span></p>
+            <p><strong>Amenaza principal:</strong> <span id="amenaza"></span></p>
+            <p><strong>Por que importa:</strong> <span id="importancia"></span></p>
+        </div>
+
+        <button id="sonidoBtn">
+            Escuchar paisaje sonoro
+        </button>
+
+    </div>
+
+</div>
+
+<audio id="audio">
+    <source src="audio/naturaleza.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
