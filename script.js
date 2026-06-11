@@ -34,6 +34,9 @@ document.getElementById("cerrar");
 const audio =
 document.getElementById("audio");
 
+const ambienteBtn =
+document.getElementById("ambienteBtn");
+
 const filtros =
 document.querySelectorAll(".filtro");
 
@@ -48,9 +51,35 @@ const nombresGrupo = {
 function cerrarPopup(){
 
     popup.style.display = "none";
+}
 
-    audio.pause();
-    audio.currentTime = 0;
+function marcarAudioActivo(){
+
+    ambienteBtn.innerText = "Pausar sonido ambiental";
+    ambienteBtn.classList.add("reproduciendo");
+}
+
+function marcarAudioInactivo(){
+
+    ambienteBtn.innerText = "Activar sonido ambiental";
+    ambienteBtn.classList.remove("reproduciendo");
+}
+
+function reproducirAmbiente(){
+
+    const reproduccion =
+    audio.play();
+
+    if(reproduccion !== undefined){
+
+        reproduccion
+        .then(()=>{
+            marcarAudioActivo();
+        })
+        .catch(()=>{
+            marcarAudioInactivo();
+        });
+    }
 }
 
 especies.forEach(caja=>{
@@ -140,9 +169,27 @@ document.addEventListener("keydown",(evento)=>{
     }
 });
 
-document
-.getElementById("sonidoBtn")
-.addEventListener("click",()=>{
+ambienteBtn.addEventListener("click",()=>{
 
-    audio.play();
+    if(audio.paused){
+
+        reproducirAmbiente();
+
+        return;
+    }
+
+    audio.pause();
+    marcarAudioInactivo();
 });
+
+window.addEventListener("load",()=>{
+
+    reproducirAmbiente();
+});
+
+document.addEventListener("click",()=>{
+
+    if(audio.paused){
+        reproducirAmbiente();
+    }
+},{once:true});
