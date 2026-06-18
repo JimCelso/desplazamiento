@@ -1,6 +1,9 @@
 const especies =
 document.querySelectorAll(".especie");
 
+const bordados =
+document.querySelectorAll(".bordado");
+
 const popup =
 document.getElementById("popup");
 
@@ -27,6 +30,9 @@ document.getElementById("amenaza");
 
 const importancia =
 document.getElementById("importancia");
+
+const ficha =
+document.querySelector(".ficha");
 
 const cerrar =
 document.getElementById("cerrar");
@@ -82,6 +88,29 @@ function reproducirAmbiente(){
     }
 }
 
+function abrirPopupBasico(nombre, img, texto){
+
+    if(!nombre) return;
+
+    titulo.innerText = nombre;
+    descripcion.innerText = texto;
+
+    if(img){
+
+        imagen.src = img;
+        imagen.alt = nombre;
+        imagen.style.display = "block";
+    }
+    else{
+
+        imagen.removeAttribute("src");
+        imagen.alt = "";
+        imagen.style.display = "none";
+    }
+
+    popup.style.display = "flex";
+}
+
 especies.forEach(caja=>{
 
     caja.addEventListener("click",()=>{
@@ -110,21 +139,30 @@ especies.forEach(caja=>{
         const datosImportancia =
         caja.dataset.importancia;
 
-        if(!nombre) return;
+        abrirPopupBasico(nombre, img, texto);
 
-        titulo.innerText = nombre;
-        imagen.src = img;
-        imagen.alt = nombre;
-        descripcion.innerText = texto;
+        ficha.style.display = "grid";
         grupo.innerText = nombresGrupo[datosGrupo] || datosGrupo;
         estado.innerText = datosEstado;
         habitat.innerText = datosHabitat;
         amenaza.innerText = datosAmenaza;
         importancia.innerText = datosImportancia;
-
-        popup.style.display = "flex";
     });
 
+});
+
+bordados.forEach(caja=>{
+
+    caja.addEventListener("click",()=>{
+
+        abrirPopupBasico(
+            caja.dataset.nombre,
+            caja.dataset.imagen,
+            caja.dataset.texto
+        );
+
+        ficha.style.display = "none";
+    });
 });
 
 filtros.forEach(boton=>{
